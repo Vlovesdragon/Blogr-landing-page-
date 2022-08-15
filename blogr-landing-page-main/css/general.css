@@ -1,0 +1,91 @@
+ol,
+li {
+  list-style: none;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 70%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 90vh;
+  min-width: 430px;
+  background-color: #ce4049;
+  background-image: url(../images/bg-pattern-intro-mobile.svg);
+  background-position: -50vh -30vh;
+  background-size: 195vh;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 100px;
+}
+
+header .gradient-bg {
+  position: absolute;
+  width: 100%;
+  min-height: 90vh;
+  background-color: #fe4c58;
+  background: #fe4c61;
+  background: -webkit-gradient(linear, left top, right top, from(#fe4c61), color-stop(35%, rgba(254, 76, 88, 0.89)), color-stop(80%, rgba(254, 76, 88, 0.73)));
+  background: linear-gradient(90deg, #fe4c61 0%, rgba(254, 76, 88, 0.89) 35%, rgba(254, 76, 88, 0.73) 80%);
+  border-bottom-left-radius: 100px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fe4c61",endColorstr="#fe4c58",GradientType=1);
+}
+
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-items: center;
+  position: absolute;
+  max-width: 100%;
+  min-width: 100%;
+  margin-top: 2em;
+  z-index: 3;
+}
+
+header nav .logo {
+  width: 70%;
+  padding: 2.5em;
+}
+
+header nav .logo img {
+  width: 7em;
+}
+
+header nav .nav-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  width: 30%;
+}
+
+header nav > ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: center;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: fixed;
+}
+/*# sourceMappingURL=general.css.map */

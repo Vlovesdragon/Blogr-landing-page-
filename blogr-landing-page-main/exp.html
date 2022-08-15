@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="bb">
+      <nav>
+        <div class="container nav-container flex">
+          <a href="#" aria-label="backToHomepage">
+            <img src="./images/logo.svg" alt="Blog r logo" />
+          </a>
+
+          <button class="mobile-nav-toggle" aria-label="menuBtn" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">menu</span></button>
+
+          <ul id="primary-navigation" class="primary-navigation flex" role="menuBar" data-visible="false">
+            <li class="nav-list" role="none">
+              <div class="nav-subject flex" id="product" onclick="openMenu(event)">
+                <a id="product-tab" class="fc-white ff-unbutu title">Product</a>
+                <div id="product-icon" class="arrow-icon title"></div>
+              </div>
+
+              <ul class="nav-sub-list hidden" id="product-menu">
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Overview</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Pricing</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Marketplace</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Features</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Integrations</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-list" role="none">
+              <div id="company" class="nav-subject flex" onclick="openMenu(event)">
+                <a href="#" class="fc-white ff-unbutu title" id="company-tab"> Company </a>
+                <div class="arrow-icon" id="company-icon"></div>
+              </div>
+
+              <ul class="nav-sub-list hidden" id="company-menu">
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">About</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Team</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Blog</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Careers</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-list" role="none">
+              <div class="nav-subject flex" id="connect" onclick="openMenu(event)">
+                <a href="#" class="fc-white ff-unbutu flex title" role="menuitem" id="connect-tab">Connect </a>
+                <div class="arrow-icon" id="connect-icon"></div>
+              </div>
+
+              <ul class="nav-sub-list hidden" id="connect-menu">
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Contact</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">Newsletter</a></li>
+                <li><a href="#" class="fs-200 fc-black ff-unbutu">LinkedIn</a></li>
+              </ul>
+            </li>
+
+            <div class="nav-btn">
+              <a href="#" class="btn btn-main ff-unbutu fc-white fw-bold">Login</a>
+              <a href="#" class="btn btn-secondary ff-unbutu fc-white fw-bold">Sign Up</a>
+            </div>
+          </ul>
+        </div>
+      </nav>
+
+      <section>
+        <div class="container hero-container grid">
+          <div class="text-wrapper flex">
+            <h1 class="fc-white ff-overpass center">A modern publishing platform</h1>
+            <p class="fs-400 fc-mute ff-overpass center">Grow your audience and build your online brand</p>
+          </div>
+
+          <div class="hero-btn flex">
+            <a href="#" class="btn btn-start fw-bold ff-unbutu">Start for Free</a>
+            <a href="#" class="btn btn-learn fw-bold ff-unbutu">Learn More</a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section style="margin-top: 4rem">
+        <div class="container content-1 flex">
+          <h1 class="center ff-unbutu">Designed for the future</h1>
+
+          <div class="content-wrapper grid">
+            <div class="img-content-1">
+              <img src="./images/illustration-editor-mobile.svg" alt="" class="editor-mobile" />
+              <img src="./images/illustration-editor-desktop.svg" alt="" class="editor-desktop" />
+            </div>
+
+            <div class="text-content-1 flex">
+              <div class="text-description">
+                <h3 class="ff-unbutu fc-heading space">Introducing an extensible editor</h3>
+                <p class="fc-sub-heading ff-overpass">
+                  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and
+                  Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.
+                </p>
+              </div>
+
+              <div class="text-description">
+                <h3 class="fs-400 ff-unbutu fc-heading space">Robust content management</h3>
+                <p class="fs-200 fc-muted fc-sub-heading">
+                  Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="state bb bt">
+        <div class="state-img">
+          <img class="phones-img" src="./images/illustration-phones.svg" />
+        </div>
+        <div class="state-main">
+          <div class="side-info">
+            <div class="state-title">State of the Art Infrastructure</div>
+            <div class="state-text">
+              With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-bottom: 4rem">
+        <div class="container content-3 grid">
+          <div class="content-3-img">
+            <img src="./images/illustration-laptop-mobile.svg" alt="" class="laptop-mobile" />
+            <img src="./images/illustration-laptop-desktop.svg" alt="" class="laptop-desktop" />
+          </div>
+
+          <div class="text-content-3 flex">
+            <div class="text-description">
+              <h3 class="ff-unbutu fc-heading space">Free, open, simple</h3>
+              <p class="fs-200 fc-muted fc-sub-heading">
+                Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and
+                works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+              </p>
+            </div>
+            <div class="text-description">
+              <h3 class="ff-unbutu fc-heading space">Powerful tooling</h3>
+              <p class="fs-200 fc-muted fc-sub-heading">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bt">
+      <div class="footer container grid">
+        <div>
+          <img class="footer-logo" src="./images/logo.svg" />
+        </div>
+        <div class="footer-text">
+          <h3>Product</h3>
+          <p>Overview</p>
+          <p>Pricing</p>
+          <p>Marketplace</p>
+          <p>Features</p>
+          <p>Integrations</p>
+        </div>
+        <div class="footer-text">
+          <h3>Company</h3>
+          <p>Team</p>
+          <p>Blog</p>
+          <p>Careers</p>
+        </div>
+        <div class="footer-text">
+          <h3>Connect</h3>
+          <p>Contact</p>
+          <p>Newsletter</p>
+          <p>LinkedIn</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+@mixin flex-box($orientation) {
+  width: 100%;
+  display: flex;
+  flex-direction: $orientation;
+  place-items: center;
+}
+
+@mixin font-style($family, $size, $color) {
+  @if $family == null or $size == null or $color==null {
+    font-family: 'Arial', cursive;
+    font-size: 11px;
+    color: red;
+  }
+  font-family: $family, sans-serif;
+  font-size: $size;
+  color: $color;
+  text-align: center;
+}
+
+@mixin btn-basic {
+  padding: 1em;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 30px;
+}
+
+ol,
+li {
+  list-style: none;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 70%;
+}
+
+header {
+  display: flex;
+  position: relative;
+  min-height: 90vh;
+  min-width: 430px;
+  background-color: rgb(206, 64, 73);
+  background-image: url(../images/bg-pattern-intro-mobile.svg);
+  background-position: -50vh -30vh;
+  background-size: 195vh;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 100px;
+  .gradient-bg {
+    position: absolute;
+    width: 100%;
+    min-height: 90vh;
+    background-color: rgb(254, 76, 88);
+    background: rgb(254, 76, 97);
+    background: -moz-linear-gradient(90deg, rgba(254, 76, 88, 1) 0%, rgba(254, 76, 88, 0.89) 35%, rgba(254, 76, 88, 0.73) 80%);
+    background: -webkit-linear-gradient(90deg, rgba(254, 76, 97, 1) 0%, rgba(254, 76, 88, 0.89) 35%, rgba(254, 76, 88, 0.73) 80%);
+    background: linear-gradient(90deg, rgba(254, 76, 97, 1) 0%, rgba(254, 76, 88, 0.89) 35%, rgba(254, 76, 88, 0.73) 80%);
+    border-bottom-left-radius: 100px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fe4c61",endColorstr="#fe4c58",GradientType=1);
+  }
+
+  nav {
+    @include flex-box(row);
+    position: absolute;
+    max-width: 100%;
+    min-width: 100%;
+    margin-top: 2em;
+    z-index: 3;
+    .logo {
+      width: 70%;
+      padding: 2.5em;
+      img {
+        width: 7em;
+      }
+    }
+    .nav-toggle {
+      display: flex;
+      place-items: center;
+      width: 30%;
+    }
+    > ul {
+      @include flex-box(column);
+      display: flex;
+      justify-content: flex-start;
+      position: fixed;
+    }
+  }
+}
